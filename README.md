@@ -4,6 +4,35 @@ A static, framework-free archive. Items are records in contributors' own
 Bluesky repositories; the site reads them directly from each user's PDS.
 No server, no database, no build step.
 
+## File structure
+
+```
+archive/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   └── contributor-request.yml
+│   └── workflows/
+│       └── add-contributor.yml
+├── css/
+│   └── style.css
+├── js/
+│   ├── atproto.js
+│   ├── browse.js
+│   ├── item.js
+│   └── upload.js
+├── scripts/
+│   └── add-contributor.mjs
+├── .nojekyll
+├── README.md
+├── contributors.json
+├── index.html
+├── item.html
+└── upload.html
+```
+
+The `.github` folder, `.nojekyll`, and `scripts/` must sit at the repo root,
+alongside `index.html`, for GitHub Pages and the workflow to find them.
+
 ## Files
 
 - `index.html` browse, search, tag filter, sorting
