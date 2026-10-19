@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upload · Archive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">Archive</a>
+    <nav><a href="index.html">Browse</a></nav>
+  </header>
+  <main>
+    <h1>Contribute to the archive</h1>
+    <p class="note">
+      Items are stored in your own Bluesky repository. Use an
+      <strong>app password</strong> (Settings → Privacy and security → App passwords),
+      never your main password. Your password is sent only to your own PDS and is
+      not saved. Your handle must also be listed in <code>contributors.json</code>
+      for your items to appear in the archive.
+    </p>
+
+    <section id="login-section">
+      <form id="login-form">
+        <label>Handle or DID
+          <input id="identifier" required autocomplete="username" placeholder="you.bsky.social">
+        </label>
+        <label>App password
+          <input id="app-password" type="password" required autocomplete="current-password">
+        </label>
+        <button type="submit">Sign in</button>
+      </form>
+    </section>
+
+    <section id="upload-section" hidden>
+      <p><span id="who"></span> · <button id="logout" type="button">Sign out</button></p>
+
+      <form id="upload-form">
+        <fieldset>
+          <legend>New item</legend>
+          <label>File <input id="file" type="file" required></label>
+          <label>Title <input id="title" required></label>
+          <label>Creator <input id="creator"></label>
+          <label>Description <textarea id="description"></textarea></label>
+          <label>Date <input id="date" placeholder="e.g. 1998 or 1998-06-12"></label>
+          <label>Source URL <input id="sourceUrl" type="url"></label>
+          <label>License <input id="license" placeholder="e.g. CC0, Public domain"></label>
+          <label>Tags (comma separated) <input id="tags" placeholder="scan, zine, 1990s"></label>
+          <button type="submit">Upload</button>
+        </fieldset>
+      </form>
+
+      <p id="msg" role="status"></p>
+
+      <h2>Your items</h2>
+      <ul id="mine" class="mine"></ul>
+    </section>
+  </main>
+  <script type="module" src="js/upload.js"></script>
+</body>
+</html>
