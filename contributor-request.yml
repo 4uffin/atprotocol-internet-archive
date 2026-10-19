@@ -1,0 +1,18 @@
+name: Request to contribute
+description: Ask to have your Bluesky handle added so your uploads appear in the archive
+title: "Add contributor"
+labels: ["contributor-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Enter the Bluesky handle you'll upload from. Your items stay in your own repository.
+        A bot will add you automatically if the handle is valid.
+  - type: input
+    id: handle
+    attributes:
+      label: Bluesky handle
+      description: For example, alice.bsky.social (without the @)
+      placeholder: alice.bsky.social
+    validations:
+      required: true

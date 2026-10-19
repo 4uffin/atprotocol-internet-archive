@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archive</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <a href="index.html">Archive</a>
+    <nav><a href="upload.html">Upload</a></nav>
+  </header>
+  <main>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search titles, descriptions, creators, tags">
+      <select id="sort">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="title">Title A–Z</option>
+      </select>
+    </div>
+    <div id="tags"></div>
+    <p id="status" class="status"></p>
+    <div id="grid" class="grid"></div>
+  </main>
+  <script type="module" src="js/browse.js"></script>
+</body>
+</html>
